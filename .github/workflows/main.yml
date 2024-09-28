@@ -23,27 +23,27 @@ jobs:
 
     - name: Install backend dependencies
       run: |
-        cd backend
+        cd country-info-app-backend
         npm install
 
     - name: Install frontend dependencies
       run: |
-        cd frontend
+        cd country-info-app-frontend
         npm install
 
     - name: Run backend tests
       run: |
-        cd backend
+        cd country-info-app-backend
         npm test # Assuming you have tests set up
 
     - name: Run frontend tests
       run: |
-        cd frontend
+        cd country-info-app-frontend
         npm test # Assuming you have tests set up
 
     - name: Build frontend
       run: |
-        cd frontend
+        cd country-info-app-frontend
         npm run build
 
     - name: Deploy to Production
