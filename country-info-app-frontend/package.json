@@ -52,5 +52,14 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest",
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "moduleNameMapper": {
+            "^axios$": "<rootDir>/node_modules/axios/dist/axios.js"
+        }
     }
 }
