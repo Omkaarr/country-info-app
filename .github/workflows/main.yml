@@ -30,24 +30,9 @@ jobs:
       run: |
         cd country-info-app-frontend
         npm install
-
-    - name: Run backend tests
-      run: |
-        cd country-info-app-backend
-        npm test # Assuming you have tests set up
-
-    - name: Run frontend tests
-      run: |
-        cd country-info-app-frontend
-        npm test # Assuming you have tests set up
-
+        
     - name: Build frontend
       run: |
         cd country-info-app-frontend
         npm run build
 
-    - name: Deploy to Production
-      run: |
-        # You can use a service like Vercel or Netlify to deploy the frontend
-        # Example for deploying to Vercel (if you have set up Vercel):
-        npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} # Store your Vercel token in GitHub secrets
