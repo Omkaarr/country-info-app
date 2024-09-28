@@ -1,0 +1,31 @@
+.country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card img {
+    object-fit: fill;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.detailsPageCard img {
+    min-height: 150px;
+    max-height: 540px;
+}
+
+.cardImgStyles {
+    height: 175px;
+}
+
+.compareCountries img {
+    min-height: 175px;
+    max-height: 318px;
+}
