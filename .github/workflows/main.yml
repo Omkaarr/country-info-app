@@ -1,0 +1,53 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Change this to your Node.js version
+
+    - name: Install backend dependencies
+      run: |
+        cd backend
+        npm install
+
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        npm install
+
+    - name: Run backend tests
+      run: |
+        cd backend
+        npm test # Assuming you have tests set up
+
+    - name: Run frontend tests
+      run: |
+        cd frontend
+        npm test # Assuming you have tests set up
+
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm run build
+
+    - name: Deploy to Production
+      run: |
+        # You can use a service like Vercel or Netlify to deploy the frontend
+        # Example for deploying to Vercel (if you have set up Vercel):
+        npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} # Store your Vercel token in GitHub secrets
