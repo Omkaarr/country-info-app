@@ -38,25 +38,24 @@ The Country Info App is a web application that allows users to explore and compa
    ```bash
    git clone https://github.com/YOUR_USERNAME/country-info-app.git
 
-
 2. Navigate to the project directory
-
+    ```bash
     cd country-info-app
 
 3. Install the backend dependencies
-
+    ```bash
     npm install
 
 4. Install the frontend dependencies
-
+    ```bash
     npm install
 
 5. Start the backend server
-
+    ```bash
     npm run dev
 
 6. Start the frontend application
-
+    ```bash
     npm start
 
 Features
